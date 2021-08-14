@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:my_airtel_app/providers/configure_progress_provider.dart';
 import 'package:my_airtel_app/widgets/common/button.dart';
 import 'package:my_airtel_app/widgets/common/skip_button.dart';
 import 'package:my_airtel_app/widgets/configure_screen/language_button.dart';
@@ -38,7 +40,8 @@ class WelcomeWideget extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 18.0),
-                  child: Button(),
+                  child: Button("Get Started",
+                      context.read<ConfigureProgress>().proceed, 2),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 10.0),

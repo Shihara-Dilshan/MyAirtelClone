@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:my_airtel_app/providers/configure_progress_provider.dart';
 import 'package:my_airtel_app/widgets/common/button.dart';
 
 class GetNumberWidget extends StatelessWidget {
@@ -91,7 +93,8 @@ class GetNumberWidget extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 18.0),
-                  child: Button(),
+                  child: Button(
+                      "Next", context.read<ConfigureProgress>().proceed, 3),
                 ),
               ],
             ),

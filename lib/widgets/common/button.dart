@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Button extends StatefulWidget {
+  final String label;
+  final Function callback;
+  final int index;
+  const Button(this.label, this.callback, this.index);
+
   @override
   _ButtonState createState() => _ButtonState();
 }
@@ -15,8 +20,10 @@ class _ButtonState extends State<Button> {
           backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
           foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
         ),
-        onPressed: () {},
-        child: Text('Get Started', style: TextStyle(fontSize: 15)),
+        onPressed: () {
+          widget.callback(widget.index);
+        },
+        child: Text(widget.label, style: TextStyle(fontSize: 15)),
       ),
     );
   }

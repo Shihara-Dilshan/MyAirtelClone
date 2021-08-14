@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:my_airtel_app/providers/configure_progress_provider.dart';
 import 'package:my_airtel_app/widgets/configure_screen/configure_get_number.dart';
 import 'package:my_airtel_app/widgets/configure_screen/configure_otp_confirm.dart';
 import 'package:my_airtel_app/widgets/configure_screen/configure_welcome.dart';
 
 class ConfigureScreen extends StatelessWidget {
+  final List<Widget> tabs = [
+    WelcomeWideget(),
+    GetNumberWidget(),
+    OTPConfirmWidget()
+  ];
+  final PageStorageBucket bucket = PageStorageBucket();
+  //Widget currentScreen = GetNumberWidget();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +54,10 @@ class ConfigureScreen extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: OTPConfirmWidget(),
+          child: PageStorage(
+            bucket: bucket,
+            child: context.watch<ConfigureProgress>().current,
+          ),
         ) /* add child content here */,
       ),
     );
