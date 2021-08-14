@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_airtel_app/screens/configure_screen.dart';
+import 'package:my_airtel_app/screens/home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,7 +22,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: _isAuthenticated ? Text('sss') : ConfigureScreen(),
+      home: !_isAuthenticated ? HomeScreen() : ConfigureScreen(),
     );
   }
 }

@@ -53,6 +53,7 @@ flutter:
     - assets/images/background.jpeg
     - assets/images/backgroundwhite.jpeg
     - assets/images/undraw_wandering_mind_0mkm.png
+    - assets/images/airtel_icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
