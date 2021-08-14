@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   provider: ^5.0.0
   flutter_svg: ^0.22.0
+  pull_to_refresh: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -49,6 +50,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/AirtelLogo.png
+    - assets/images/AirtelLogoWhite.png
     - assets/images/shihara.png
     - assets/images/background.jpeg
     - assets/images/backgroundwhite.jpeg

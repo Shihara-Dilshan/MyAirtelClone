@@ -9,7 +9,7 @@ void main() {
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (_) => ConfigureProgress()),
-      ChangeNotifierProvider(create: (_) => Auth())
+      ChangeNotifierProvider(create: (_) => Auth()),
     ],
     child: MyApp(),
   ));
@@ -22,7 +22,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        appBarTheme: AppBarTheme(
+          brightness: Brightness.dark,
+        ),
       ),
       home: context.watch<Auth>().isAuthenticated
           ? HomeScreen()

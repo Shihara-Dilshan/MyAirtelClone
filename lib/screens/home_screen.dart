@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:my_airtel_app/screens/tabs/history.dart';
 import 'package:my_airtel_app/screens/tabs/home.dart';
 import 'package:my_airtel_app/screens/tabs/more.dart';
 import 'package:my_airtel_app/screens/tabs/movies.dart';
+import 'package:my_airtel_app/widgets/common/icon_with_badge.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -11,13 +13,48 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeState extends State<HomeScreen> {
   int _currentTab = 0;
-  List<Widget> tabs = [Home(), History(), Movies(), More()];
+  final List<Widget> tabs = [Home(), History(), Movies(), More()];
   final PageStorageBucket bucket = PageStorageBucket();
   Widget currentScreen = Home();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backwardsCompatibility: false,
+        backgroundColor: Colors.grey[800],
+        systemOverlayStyle:
+            SystemUiOverlayStyle(statusBarColor: Colors.grey[800]),
+        elevation: 0,
+        titleSpacing: 10.0,
+        title: Image.asset(
+          'assets/images/AirtelLogoWhite.png',
+          height: 60,
+        ),
+        actions: 1 == 1
+            ? [
+                IconButton(
+                  visualDensity:
+                      VisualDensity(horizontal: -4.0, vertical: -4.0),
+                  padding: EdgeInsets.zero,
+                  icon: const Icon(
+                    Icons.sort_by_alpha,
+                    color: Colors.grey,
+                  ),
+                  tooltip: 'Open shopping cart',
+                  onPressed: () {
+                    // handle the press
+                  },
+                ),
+                IconWithBadge(
+                  text: 'Inbox',
+                  iconData: Icons.notifications,
+                  notificationCount: 11,
+                  onTap: () {},
+                )
+              ]
+            : [],
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       bottomNavigationBar: BottomAppBar(
         child: Container(
@@ -151,7 +188,7 @@ class _HomeState extends State<HomeScreen> {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(0.0),
           child: PageStorage(
             bucket: bucket,
             child: currentScreen,
