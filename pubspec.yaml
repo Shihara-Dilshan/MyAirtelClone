@@ -33,6 +33,7 @@ dependencies:
   pull_to_refresh: ^2.0.0
   carousel_slider: ^4.0.0
   percent_indicator: ^3.0.1
+  modal_bottom_sheet: ^2.0.0
 
 dev_dependencies:
   flutter_test:

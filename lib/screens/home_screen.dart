@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:my_airtel_app/screens/tabs/history.dart';
 import 'package:my_airtel_app/screens/tabs/home.dart';
 import 'package:my_airtel_app/screens/tabs/more.dart';
 import 'package:my_airtel_app/screens/tabs/movies.dart';
 import 'package:my_airtel_app/widgets/common/icon_with_badge.dart';
+import 'package:my_airtel_app/widgets/common/language_choose_model.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -43,7 +45,20 @@ class _HomeState extends State<HomeScreen> {
                   ),
                   tooltip: 'Open shopping cart',
                   onPressed: () {
-                    // handle the press
+                    1 == 1
+                        ? showMaterialModalBottomSheet(
+                            backgroundColor: Colors.transparent,
+                            context: context,
+                            builder: (context) => SingleChildScrollView(
+                              controller: ModalScrollController.of(context),
+                              child: ChooseLangauge(),
+                            ),
+                          )
+                        : showCupertinoModalBottomSheet(
+                            backgroundColor: Colors.transparent,
+                            context: context,
+                            builder: (context) => ChooseLangauge(),
+                          );
                   },
                 ),
                 IconWithBadge(
