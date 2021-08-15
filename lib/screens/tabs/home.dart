@@ -5,6 +5,11 @@ import 'package:my_airtel_app/providers/auth_provider.dart';
 import 'package:my_airtel_app/providers/configure_progress_provider.dart';
 import 'package:my_airtel_app/widgets/common/appBar.dart';
 import 'package:my_airtel_app/widgets/common/button.dart';
+import 'package:my_airtel_app/widgets/common/carasoul.dart';
+import 'package:my_airtel_app/widgets/home_screen/airtel_thanks.dart';
+import 'package:my_airtel_app/widgets/home_screen/connection_status_indicator.dart';
+import 'package:my_airtel_app/widgets/home_screen/data_sms_voice_balance_container.dart';
+import 'package:my_airtel_app/widgets/home_screen/home_background.dart';
 import 'package:provider/provider.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
@@ -66,34 +71,9 @@ class _HomeState extends State<Home> {
           onLoading: _onLoading,
           child: Stack(
             children: <Widget>[
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height,
-                color: Colors.white,
-                child: Column(
-                  children: [
-                    Expanded(
-                        flex: 1,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.grey[800],
-                            borderRadius: BorderRadius.only(
-                                bottomRight: Radius.circular(40.0),
-                                bottomLeft: Radius.circular(40.0)),
-                          ),
-                          width: MediaQuery.of(context).size.width,
-                        )),
-                    Expanded(
-                        flex: 4,
-                        child: Container(
-                          color: Colors.white,
-                          width: MediaQuery.of(context).size.width,
-                        ))
-                  ],
-                ),
-              ),
+              HomeBackground(),
               Padding(
-                padding: const EdgeInsets.all(18.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height,
@@ -103,94 +83,10 @@ class _HomeState extends State<Home> {
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                color: Colors.grey[900],
-                                borderRadius: BorderRadius.circular(50),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 8.0,
-                                    right: 8.0,
-                                    top: 7.0,
-                                    bottom: 7.0),
-                                child: Row(
-                                  children: [
-                                    Text(
-                                      '750935556',
-                                      style: TextStyle(color: Colors.white),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 8.0, right: 8.0),
-                                      child: Container(
-                                        height: 8,
-                                        width: 8,
-                                        decoration: BoxDecoration(
-                                            color: Colors.green,
-                                            borderRadius:
-                                                BorderRadius.circular(50)),
-                                      ),
-                                    ),
-                                    Container(
-                                      height: 18,
-                                      width: 18,
-                                      decoration: BoxDecoration(
-                                          color: Colors.grey[700],
-                                          borderRadius:
-                                              BorderRadius.circular(50)),
-                                      child: Icon(
-                                        Icons.keyboard_arrow_down,
-                                        size: 18,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: Colors.red[900],
-                                borderRadius: BorderRadius.circular(50),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 8.0,
-                                    right: 8.0,
-                                    top: 7.0,
-                                    bottom: 7.0),
-                                child: Row(
-                                  children: [
-                                    Text(
-                                      'airtelThanks',
-                                      style: TextStyle(color: Colors.white),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 8.0),
-                                      child: Container(
-                                        height: 18,
-                                        width: 18,
-                                        decoration: BoxDecoration(
-                                            color: Colors.red[700],
-                                            borderRadius:
-                                                BorderRadius.circular(50)),
-                                        child: Icon(
-                                          Icons.keyboard_arrow_right,
-                                          size: 18,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
+                          children: [ConnectionStatus(), AirtelThanks()],
                         ),
-                        Text('data'),
-                        Text('data'),
+                        ComplicatedImageDemo(),
+                        DataSmsVoiceContainer(),
                         Text('data'),
                         Text('data'),
                         Text('data'),
