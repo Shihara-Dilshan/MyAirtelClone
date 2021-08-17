@@ -6,8 +6,10 @@ import 'package:my_airtel_app/widgets/common/price_tag.dart';
 class RechargeCard extends StatelessWidget {
   final double paddingHorizontal;
   final double paddingVirtical;
+  final List<String> entries = <String>['30', '50', '100', '150', '200'];
 
-  const RechargeCard([this.paddingHorizontal = 5, this.paddingVirtical = 5]);
+  RechargeCard([this.paddingHorizontal = 5, this.paddingVirtical = 5]);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -103,29 +105,16 @@ class RechargeCard extends StatelessWidget {
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 15.0),
-                  height: 50.0,
+                  height: 40.0,
+                  color: Colors.white,
                   width: MediaQuery.of(context).size.width,
-                  child: ListView(
-                    padding: const EdgeInsets.only(top: 0),
-                    scrollDirection: Axis.horizontal,
-                    shrinkWrap: true,
-                    children: <Widget>[
-                      PriceCard(),
-                      PriceCard(),
-                      PriceCard(),
-                      PriceCard(),
-                      PriceCard(),
-                      PriceCard(),
-                      PriceCard(),
-                      PriceCard(),
-                      PriceCard(),
-                      PriceCard(),
-                      PriceCard(),
-                      PriceCard(),
-                      PriceCard(),
-                      PriceCard(),
-                    ],
-                  ),
+                  child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      padding: const EdgeInsets.only(top: 0),
+                      itemCount: entries.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return PriceCard(lable: entries[index]);
+                      }),
                 ),
               ],
             ),

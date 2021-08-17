@@ -8,7 +8,7 @@ class DataSmsVoiceContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 18.0),
+      padding: const EdgeInsets.only(top: 18.0, bottom: 18.0),
       child: Container(
         width: MediaQuery.of(context).size.width - 30,
         decoration: BoxDecoration(

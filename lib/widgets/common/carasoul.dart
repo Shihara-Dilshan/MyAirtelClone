@@ -10,14 +10,12 @@ List<Widget> imageSliders = imgList
     .map((item) => Container(
           child: Container(
             margin: EdgeInsets.only(right: 15.0),
-            child: ClipRRect(
-                borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                child: Container(
-                  height: 200,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: NetworkImage(item), fit: BoxFit.fill)),
-                )),
+            child: Container(
+              height: 150,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: NetworkImage(item), fit: BoxFit.fill)),
+            ),
           ),
         ))
     .toList();
@@ -32,7 +30,7 @@ class ComplicatedImageDemo extends StatelessWidget {
           autoPlay: true,
           aspectRatio: 2.0,
           disableCenter: true,
-          viewportFraction: 1,
+          viewportFraction: 0.97,
           enlargeCenterPage: false,
         ),
         items: imageSliders,
