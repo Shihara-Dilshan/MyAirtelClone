@@ -14,7 +14,6 @@ class _ButtonState extends State<Button> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 45,
       child: TextButton(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all<Color>(Colors.red),

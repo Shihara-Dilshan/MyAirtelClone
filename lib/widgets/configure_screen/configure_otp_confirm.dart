@@ -15,14 +15,17 @@ class OTPConfirmWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Text('Enter OTP sent\to your number',
+                Text('Enter OTP sent\nto your number',
                     style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 35)),
-                Text('Sign in to connect with My Airtel',
-                    style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 16,
-                        color: Colors.black87)),
+                        TextStyle(fontWeight: FontWeight.w400, fontSize: 35)),
+                Padding(
+                  padding: const EdgeInsets.only(top: 18.0, bottom: 12.0),
+                  child: Text('We sent a code to the number 075 XXX - XXXX',
+                      style: TextStyle(
+                          fontWeight: FontWeight.normal,
+                          fontSize: 16,
+                          color: Colors.black87)),
+                ),
                 Text('Change my number',
                     style: TextStyle(
                         fontWeight: FontWeight.normal,

@@ -28,7 +28,10 @@ class _DataDetailsState extends State<DataDetails> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text('Anytime'),
+                  child: Text(
+                    'Anytime',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                 )
               ],
             ),
@@ -47,7 +50,8 @@ class _DataDetailsState extends State<DataDetails> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text('Night time'),
+                  child: Text('Night time',
+                      style: TextStyle(fontWeight: FontWeight.bold)),
                 )
               ],
             ),
@@ -66,7 +70,8 @@ class _DataDetailsState extends State<DataDetails> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text('4G'),
+                  child:
+                      Text('4G', style: TextStyle(fontWeight: FontWeight.bold)),
                 )
               ],
             ),

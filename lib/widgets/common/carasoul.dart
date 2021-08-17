@@ -12,33 +12,11 @@ List<Widget> imageSliders = imgList
             margin: EdgeInsets.only(right: 15.0),
             child: ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                child: Stack(
-                  children: <Widget>[
-                    Image.network(
-                      item,
-                      fit: BoxFit.fill,
-                      width: 1000,
-                    ),
-                    Positioned(
-                      bottom: 0.0,
-                      left: 0.0,
-                      right: 0.0,
-                      child: Container(
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Color.fromARGB(200, 0, 0, 0),
-                              Color.fromARGB(0, 0, 0, 0)
-                            ],
-                            begin: Alignment.bottomCenter,
-                            end: Alignment.topCenter,
-                          ),
-                        ),
-                        padding: EdgeInsets.symmetric(
-                            vertical: 10.0, horizontal: 20.0),
-                      ),
-                    ),
-                  ],
+                child: Container(
+                  height: 200,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: NetworkImage(item), fit: BoxFit.fill)),
                 )),
           ),
         ))
@@ -54,7 +32,7 @@ class ComplicatedImageDemo extends StatelessWidget {
           autoPlay: true,
           aspectRatio: 2.0,
           disableCenter: true,
-          viewportFraction: 0.97,
+          viewportFraction: 1,
           enlargeCenterPage: false,
         ),
         items: imageSliders,

@@ -119,6 +119,5 @@ class DataSmsVoiceContainer extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }

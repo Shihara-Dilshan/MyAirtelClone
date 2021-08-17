@@ -16,14 +16,17 @@ class GetNumberWidget extends StatelessWidget {
               children: [
                 Text('Enter your\nmobile number',
                     style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 35)),
-                Text('Sign in to connect with My Airtel',
-                    style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 16,
-                        color: Colors.black87)),
+                        TextStyle(fontWeight: FontWeight.w400, fontSize: 35)),
                 Padding(
-                  padding: const EdgeInsets.only(top: 58.0),
+                  padding: const EdgeInsets.only(top: 18.0),
+                  child: Text('Sign in to connect with My Airtel',
+                      style: TextStyle(
+                          fontWeight: FontWeight.normal,
+                          fontSize: 16,
+                          color: Colors.black87)),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 38.0),
                   child: Row(
                     children: [
                       Expanded(
@@ -92,7 +95,7 @@ class GetNumberWidget extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 18.0),
+                  padding: const EdgeInsets.only(top: 48.0),
                   child: Button(
                       "Next", context.read<ConfigureProgress>().proceed, 3),
                 ),

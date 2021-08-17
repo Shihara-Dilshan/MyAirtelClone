@@ -15,8 +15,8 @@ class HomeBackground extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Colors.grey[800],
                   borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(40.0),
-                      bottomLeft: Radius.circular(40.0)),
+                      bottomRight: Radius.circular(30.0),
+                      bottomLeft: Radius.circular(30.0)),
                 ),
                 width: MediaQuery.of(context).size.width,
               )),

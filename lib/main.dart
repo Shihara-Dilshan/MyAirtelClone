@@ -22,7 +22,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return (MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -33,6 +33,6 @@ class MyApp extends StatelessWidget {
       home: context.watch<Auth>().isAuthenticated
           ? HomeScreen()
           : ConfigureScreen(),
-    );
+    ));
   }
 }

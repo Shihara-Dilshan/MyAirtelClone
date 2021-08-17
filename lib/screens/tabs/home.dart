@@ -1,15 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:my_airtel_app/providers/auth_provider.dart';
 import 'package:my_airtel_app/providers/configure_progress_provider.dart';
 import 'package:my_airtel_app/widgets/common/appBar.dart';
 import 'package:my_airtel_app/widgets/common/button.dart';
 import 'package:my_airtel_app/widgets/common/carasoul.dart';
+import 'package:my_airtel_app/widgets/common/flash_deals.dart';
+import 'package:my_airtel_app/widgets/common/price_tag.dart';
 import 'package:my_airtel_app/widgets/home_screen/airtel_thanks.dart';
 import 'package:my_airtel_app/widgets/home_screen/connection_status_indicator.dart';
 import 'package:my_airtel_app/widgets/home_screen/data_sms_voice_balance_container.dart';
+import 'package:my_airtel_app/widgets/home_screen/flash_deal_container_card.dart';
 import 'package:my_airtel_app/widgets/home_screen/home_background.dart';
+import 'package:my_airtel_app/widgets/home_screen/recharge_card.dart';
 import 'package:provider/provider.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
@@ -87,13 +92,11 @@ class _HomeState extends State<Home> {
                         ),
                         ComplicatedImageDemo(),
                         DataSmsVoiceContainer(),
-                        Text('data'),
-                        Text('data'),
-                        Text('data'),
-                        Text('data'),
-                        Text('data'),
-                        Text('data'),
-                        Text('data')
+                        RechargeCard(),
+                        FlashDealContainer(),
+                        SizedBox(
+                          height: 200,
+                        ),
                       ],
                     ),
                   ),
