@@ -13,6 +13,7 @@ List<Widget> imageSliders = imgList
             child: Container(
               height: 150,
               decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
                       image: NetworkImage(item), fit: BoxFit.fill)),
             ),

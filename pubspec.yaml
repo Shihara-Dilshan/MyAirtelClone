@@ -55,6 +55,7 @@ flutter:
   assets:
     - assets/images/AirtelLogo.png
     - assets/images/AirtelLogoWhite.png
+    - assets/images/single_logo.png
     - assets/images/shihara.png
     - assets/images/man_sitting.png
     - assets/images/background.jpeg

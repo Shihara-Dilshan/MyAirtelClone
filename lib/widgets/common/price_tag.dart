@@ -17,7 +17,7 @@ class PriceCard extends StatelessWidget {
         child: Center(child: Text('Rs. ${this.lable}')),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(4),
-            color: Colors.grey[100],
+            color: Colors.white,
             border: Border.all(color: Colors.grey[200])),
       ),
     );
