@@ -7,9 +7,9 @@ class LanguageButton extends StatelessWidget {
   final String languageTag;
   final Function callback;
   const LanguageButton(
-      {@required this.language,
-      @required this.languageTag,
-      @required this.callback});
+      {required this.language,
+      required this.languageTag,
+      required this.callback});
 
   @override
   Widget build(BuildContext context) {
@@ -26,14 +26,14 @@ class LanguageButton extends StatelessWidget {
             backgroundColor: MaterialStateProperty.resolveWith<Color>((states) {
               return context.watch<Language>().currentLanguage == languageTag
                   ? Colors.white
-                  : Colors.grey[200];
+                  : (Colors.grey[200])!;
             }),
             side: MaterialStateProperty.resolveWith((states) {
               return BorderSide(
                   color:
                       context.watch<Language>().currentLanguage == languageTag
                           ? Colors.red
-                          : Colors.grey[200],
+                          : (Colors.grey[200])!,
                   width: 1);
             }),
             shape: MaterialStateProperty.all(RoundedRectangleBorder(

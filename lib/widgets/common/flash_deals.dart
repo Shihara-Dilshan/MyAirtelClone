@@ -11,11 +11,20 @@ final List<String> imgList = [
 
 List<Widget> imageSliders = imgList
     .map((item) => Container(
-          color: Colors.white,
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.white,
+                spreadRadius: 0,
+                blurRadius: 20,
+                offset: Offset(0, 3), // changes position of shadow
+              ),
+            ],
+          ),
           child: Container(
             margin: EdgeInsets.only(right: 15.0),
             child: ClipRRect(
-                borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                borderRadius: BorderRadius.all(Radius.circular(10.0)),
                 child: Row(
                   children: [
                     Expanded(

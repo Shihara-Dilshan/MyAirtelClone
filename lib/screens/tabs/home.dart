@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
           enablePullUp: false,
           header: WaterDropHeader(),
           footer: CustomFooter(
-            builder: (BuildContext context, LoadStatus mode) {
+            builder: (BuildContext context, LoadStatus? mode) {
               Widget body;
               if (mode == LoadStatus.idle) {
                 body = Text("pull up load");

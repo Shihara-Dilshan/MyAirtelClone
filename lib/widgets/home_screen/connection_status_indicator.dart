@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ConnectionStatus extends StatelessWidget {
-  final String mobileNumber;
-  final bool isActive;
+  final String? mobileNumber;
+  final bool? isActive;
 
-  const ConnectionStatus({Key key, this.mobileNumber, this.isActive});
+  const ConnectionStatus({this.mobileNumber, this.isActive});
 
   @override
   Widget build(BuildContext context) {

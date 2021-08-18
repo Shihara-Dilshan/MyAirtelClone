@@ -7,7 +7,7 @@ class LanguageCard extends StatelessWidget {
   final String language;
   final String sample;
 
-  const LanguageCard({@required this.language, @required this.sample});
+  const LanguageCard({required this.language, required this.sample});
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +19,8 @@ class LanguageCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(4),
             border: Border.all(
                 color: context.read<Language>().currentLanguage == language
-                    ? Colors.red
-                    : Colors.grey[100])),
+                    ? (Colors.red)
+                    : (Colors.grey[100])!)),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(

@@ -34,7 +34,7 @@ class GetNumberWidget extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration(
                               color: Colors.grey[100],
-                              border: Border.all(color: Colors.grey[200]),
+                              border: Border.all(color: (Colors.grey[200])!),
                               borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(5),
                                   bottomLeft: Radius.circular(5))),
@@ -53,7 +53,7 @@ class GetNumberWidget extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration(
                               color: Colors.grey[50],
-                              border: Border.all(color: Colors.grey[200]),
+                              border: Border.all(color: (Colors.grey[200])!),
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(5),
                                   bottomRight: Radius.circular(5))),
@@ -81,7 +81,7 @@ class GetNumberWidget extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                       color: Colors.grey[50],
-                      border: Border.all(color: Colors.grey[200]),
+                      border: Border.all(color: (Colors.grey[200])!),
                       borderRadius: BorderRadius.only(
                           topRight: Radius.circular(5),
                           bottomRight: Radius.circular(5))),

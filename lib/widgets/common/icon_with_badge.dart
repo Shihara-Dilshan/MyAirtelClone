@@ -3,16 +3,15 @@ import 'package:flutter/material.dart';
 class IconWithBadge extends StatelessWidget {
   final IconData iconData;
   final String text;
-  final VoidCallback onTap;
-  final int notificationCount;
+  final VoidCallback? onTap;
+  final int? notificationCount;
 
   const IconWithBadge({
-    Key key,
     this.onTap,
-    @required this.text,
-    @required this.iconData,
+    required this.text,
+    required this.iconData,
     this.notificationCount,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

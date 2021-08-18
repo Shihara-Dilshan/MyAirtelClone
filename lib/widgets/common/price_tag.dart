@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class PriceCard extends StatelessWidget {
   final String lable;
-  final double height;
-  final double width;
+  final double? height;
+  final double? width;
 
-  const PriceCard({@required this.lable, this.height, this.width});
+  const PriceCard({required this.lable, this.height, this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class PriceCard extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(4),
             color: Colors.white,
-            border: Border.all(color: Colors.grey[200])),
+            border: Border.all(color: (Colors.grey[200])!)),
       ),
     );
   }

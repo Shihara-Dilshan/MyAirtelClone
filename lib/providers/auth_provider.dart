@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Auth with ChangeNotifier {
-  bool _isAuthenticated = true;
+  bool _isAuthenticated = false;
 
   bool get isAuthenticated => _isAuthenticated;
 

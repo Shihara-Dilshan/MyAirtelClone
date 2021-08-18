@@ -7,6 +7,7 @@ import 'package:my_airtel_app/screens/tabs/more.dart';
 import 'package:my_airtel_app/screens/tabs/movies.dart';
 import 'package:my_airtel_app/widgets/common/icon_with_badge.dart';
 import 'package:my_airtel_app/widgets/common/language_choose_model.dart';
+import 'package:my_airtel_app/widgets/common/more_menu.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -65,7 +66,9 @@ class _HomeState extends State<HomeScreen> {
                   text: 'Inbox',
                   iconData: Icons.notifications,
                   notificationCount: 11,
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, "/notifications");
+                  },
                 )
               ]
             : [],
@@ -176,10 +179,20 @@ class _HomeState extends State<HomeScreen> {
               MaterialButton(
                 minWidth: 1,
                 onPressed: () {
-                  setState(() {
-                    currentScreen = More();
-                    _currentTab = 3;
-                  });
+                  1 == 1
+                      ? showMaterialModalBottomSheet(
+                          backgroundColor: Colors.transparent,
+                          context: context,
+                          builder: (context) => SingleChildScrollView(
+                            controller: ModalScrollController.of(context),
+                            child: MoreMenu(),
+                          ),
+                        )
+                      : showCupertinoModalBottomSheet(
+                          backgroundColor: Colors.transparent,
+                          context: context,
+                          builder: (context) => MoreMenu(),
+                        );
                 },
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,

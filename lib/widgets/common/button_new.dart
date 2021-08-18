@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class ButtonNew extends StatelessWidget {
   final String lable;
-  final Color color;
-  final Color textColor;
-  final double height;
-  final double width;
+  final Color? color;
+  final Color? textColor;
+  final double? height;
+  final double? width;
 
   const ButtonNew({
-    @required this.lable,
+    required this.lable,
     this.color,
     this.textColor,
     this.height,

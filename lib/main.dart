@@ -5,6 +5,7 @@ import 'package:my_airtel_app/providers/data_type_provider.dart';
 import 'package:my_airtel_app/providers/language_provider.dart';
 import 'package:my_airtel_app/screens/configure_screen.dart';
 import 'package:my_airtel_app/screens/home_screen.dart';
+import 'package:my_airtel_app/screens/notification_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -25,14 +26,21 @@ class MyApp extends StatelessWidget {
     return (MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
+      initialRoute: "/",
+      routes: {
+        "/": (context) => context.watch<Auth>().isAuthenticated
+            ? HomeScreen()
+            : ConfigureScreen(),
+        "/notifications": (context) => Notifications(),
+      },
       theme: ThemeData(
         appBarTheme: AppBarTheme(
           brightness: Brightness.dark,
         ),
       ),
-      home: context.watch<Auth>().isAuthenticated
-          ? HomeScreen()
-          : ConfigureScreen(),
+      // home: context.watch<Auth>().isAuthenticated
+      //     ? HomeScreen()
+      //     : ConfigureScreen(),
     ));
   }
 }

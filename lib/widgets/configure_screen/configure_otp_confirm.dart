@@ -36,7 +36,7 @@ class OTPConfirmWidget extends StatelessWidget {
                   child: Container(
                     decoration: BoxDecoration(
                         color: Colors.grey[50],
-                        border: Border.all(color: Colors.grey[200]),
+                        border: Border.all(color: (Colors.grey[200])!),
                         borderRadius: BorderRadius.only(
                             topRight: Radius.circular(5),
                             bottomRight: Radius.circular(5))),
