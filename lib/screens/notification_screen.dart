@@ -15,27 +15,24 @@ class Notifications extends StatelessWidget {
         centerTitle: true,
         leading: Icon(Icons.arrow_back),
         backgroundColor: Colors.grey[800],
-        actions: 1 == 1
-            ? [
-                IconButton(
-                  visualDensity:
-                      VisualDensity(horizontal: -4.0, vertical: -4.0),
-                  padding: EdgeInsets.zero,
-                  icon: const Icon(
-                    Icons.sort_by_alpha,
-                    color: Colors.grey,
-                  ),
-                  tooltip: 'Open shopping cart',
-                  onPressed: () {},
-                ),
-                IconWithBadge(
-                  text: 'Inbox',
-                  iconData: Icons.notifications,
-                  notificationCount: 11,
-                  onTap: () {},
-                )
-              ]
-            : [],
+        actions: [
+          IconButton(
+            visualDensity: VisualDensity(horizontal: -4.0, vertical: -4.0),
+            padding: EdgeInsets.zero,
+            icon: const Icon(
+              Icons.sort_by_alpha,
+              color: Colors.grey,
+            ),
+            tooltip: 'Open shopping cart',
+            onPressed: () {},
+          ),
+          IconWithBadge(
+            text: 'Inbox',
+            iconData: Icons.notifications,
+            notificationCount: 11,
+            onTap: () {},
+          )
+        ],
       ),
       body: Stack(
         children: <Widget>[
@@ -99,21 +96,25 @@ class Notifications extends StatelessWidget {
                   ),
                 )),
           ),
-          Padding(
-            padding:
-                const EdgeInsets.only(bottom: 33.0, left: 20.0, right: 20.0),
-            child: Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                width: MediaQuery.of(context).size.width,
-                height: 45,
-                color: Colors.white,
-                child: ButtonNew(
-                  lable: "Delete",
-                ),
-              ),
-            ),
-          ),
+          1 == 1
+              ? Padding(
+                  padding: const EdgeInsets.only(
+                      bottom: 33.0, left: 20.0, right: 20.0),
+                  child: Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      height: 45,
+                      color: Colors.white,
+                      child: ButtonNew(
+                        lable: "Delete",
+                      ),
+                    ),
+                  ),
+                )
+              : SizedBox(
+                  height: 0,
+                )
         ],
       ),
     );

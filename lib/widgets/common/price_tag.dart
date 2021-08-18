@@ -18,7 +18,7 @@ class PriceCard extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(4),
             color: Colors.white,
-            border: Border.all(color: (Colors.grey[200])!)),
+            border: Border.all(color: (Colors.grey[100])!)),
       ),
     );
   }

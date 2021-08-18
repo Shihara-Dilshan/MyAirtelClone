@@ -23,7 +23,7 @@ class HomeBackground extends StatelessWidget {
           Expanded(
               flex: 4,
               child: Container(
-                color: Colors.grey[200],
+                color: Color(0xFFF4F4F4),
                 width: MediaQuery.of(context).size.width,
               ))
         ],

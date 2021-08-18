@@ -6,6 +6,7 @@ import 'package:my_airtel_app/providers/language_provider.dart';
 import 'package:my_airtel_app/screens/configure_screen.dart';
 import 'package:my_airtel_app/screens/home_screen.dart';
 import 'package:my_airtel_app/screens/notification_screen.dart';
+import 'package:my_airtel_app/screens/manage_connection_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
             ? HomeScreen()
             : ConfigureScreen(),
         "/notifications": (context) => Notifications(),
+        "/managecon": (context) => ManageConnections(),
       },
       theme: ThemeData(
         appBarTheme: AppBarTheme(

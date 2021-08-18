@@ -3,13 +3,25 @@ import 'package:my_airtel_app/widgets/common/more_menu_header.dart';
 import 'package:my_airtel_app/widgets/common/select_language_card.dart';
 
 List<List<dynamic>> data = [
-  ['Packs & Reload', Icons.credit_card, () {}],
-  ['Manage Connections', Icons.connected_tv, () {}],
+  [
+    'Packs & Reload',
+    Icons.credit_card_off_sharp,
+    (ctx) {
+      Navigator.pushNamed(ctx, "/managecon");
+    }
+  ],
+  [
+    'Manage Connections',
+    Icons.connected_tv,
+    (ctx) {
+      Navigator.pushNamed(ctx, "/managecon");
+    }
+  ],
   ['My Usage', Icons.grass_sharp, () {}],
   ['My Balance', Icons.credit_card, () {}],
-  ['Entertaintment', Icons.dangerous, () {}],
+  ['Entertaintment', Icons.movie, () {}],
   ['Invite Friends', Icons.g_mobiledata, () {}],
-  ['IDD & Roaming', Icons.face, () {}],
+  ['IDD & Roaming', Icons.inventory_2_outlined, () {}],
   ['Get Help', Icons.verified, () {}],
   ['Give Feedback', Icons.star, () {}]
 ];
@@ -30,7 +42,7 @@ class MoreMenu extends StatelessWidget {
             children: <Widget>[
               MoreMenuHeader(),
               Expanded(
-                flex: 6, // 40% of space
+                flex: 6,
                 child: Container(
                   color: Colors.white,
                   child: ListView.builder(
@@ -42,18 +54,18 @@ class MoreMenu extends StatelessWidget {
                           horizontalTitleGap: 18,
                           selected: true,
                           onTap: () {
-                            Navigator.pushNamed(context, "/notifications");
+                            data[index][2](context);
                           },
                           leading: Container(
-                            width: 40,
-                            height: 40,
+                            width: 34,
+                            height: 34,
                             child: Icon(
                               data[index][1],
                               color: Colors.red,
                               size: 17,
                             ),
                             decoration: BoxDecoration(
-                              color: (Colors.red[50])!.withOpacity(0.3),
+                              color: (Colors.red[50])!.withOpacity(0.2),
                               borderRadius: BorderRadius.all(
                                 Radius.circular(100),
                               ),

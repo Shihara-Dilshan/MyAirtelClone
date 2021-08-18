@@ -9,7 +9,7 @@ final List<String> imgList = [
 List<Widget> imageSliders = imgList
     .map((item) => Container(
           child: Container(
-            margin: EdgeInsets.only(right: 15.0),
+            margin: EdgeInsets.only(right: 0.0),
             child: Container(
               height: 150,
               decoration: BoxDecoration(
@@ -24,18 +24,15 @@ List<Widget> imageSliders = imgList
 class ComplicatedImageDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 18.0),
-      child: CarouselSlider(
-        options: CarouselOptions(
-          autoPlay: true,
-          aspectRatio: 2.0,
-          disableCenter: true,
-          viewportFraction: 0.97,
-          enlargeCenterPage: false,
-        ),
-        items: imageSliders,
+    return CarouselSlider(
+      options: CarouselOptions(
+        autoPlay: true,
+        aspectRatio: 2.0,
+        disableCenter: true,
+        viewportFraction: 1,
+        enlargeCenterPage: false,
       ),
+      items: imageSliders,
     );
   }
 }

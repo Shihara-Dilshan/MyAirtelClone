@@ -48,17 +48,19 @@ class MoreMenuHeader extends StatelessWidget {
                           children: [
                             Text(
                               'John Doe',
-                              style: TextStyle(color: Colors.white),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20),
                             ),
                             Text(
                               '0763124312',
-                              style: TextStyle(color: Colors.white),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
                         Text(
                           'View Profile',
-                          style: TextStyle(color: Colors.grey),
+                          style: TextStyle(color: Colors.grey, fontSize: 14),
                         )
                       ],
                     ),
@@ -73,7 +75,7 @@ class MoreMenuHeader extends StatelessWidget {
                   color: Colors.grey,
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.grey[700],
+                  color: Color(0xFF97999C).withOpacity(0.1),
                   borderRadius: BorderRadius.all(
                     Radius.circular(100),
                   ),

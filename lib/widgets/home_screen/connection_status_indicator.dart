@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ConnectionStatus extends StatelessWidget {
-  final String? mobileNumber;
-  final bool? isActive;
+  final String mobileNumber;
+  final bool isActive;
 
-  const ConnectionStatus({this.mobileNumber, this.isActive});
+  const ConnectionStatus({required this.mobileNumber, required this.isActive});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class ConnectionStatus extends StatelessWidget {
         child: Row(
           children: [
             Text(
-              '750935556',
+              mobileNumber,
               style: TextStyle(color: Colors.white),
             ),
             Padding(
@@ -28,7 +28,7 @@ class ConnectionStatus extends StatelessWidget {
                 height: 8,
                 width: 8,
                 decoration: BoxDecoration(
-                    color: Colors.green,
+                    color: isActive ? Colors.green : Colors.red,
                     borderRadius: BorderRadius.circular(50)),
               ),
             ),

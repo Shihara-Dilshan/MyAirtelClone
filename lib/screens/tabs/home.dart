@@ -10,6 +10,7 @@ import 'package:my_airtel_app/widgets/common/carasoul.dart';
 import 'package:my_airtel_app/widgets/common/flash_deals.dart';
 import 'package:my_airtel_app/widgets/common/price_tag.dart';
 import 'package:my_airtel_app/widgets/home_screen/airtel_thanks.dart';
+import 'package:my_airtel_app/widgets/home_screen/banner.dart';
 import 'package:my_airtel_app/widgets/home_screen/connection_status_indicator.dart';
 import 'package:my_airtel_app/widgets/home_screen/data_sms_voice_balance_container.dart';
 import 'package:my_airtel_app/widgets/home_screen/flash_deal_container_card.dart';
@@ -79,38 +80,54 @@ class _HomeState extends State<Home> {
           child: Stack(
             children: <Widget>[
               HomeBackground(),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height,
-                  color: Colors.transparent,
-                  child: SingleChildScrollView(
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                color: Colors.transparent,
+                child: SingleChildScrollView(
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      top: 22.0,
+                      left: 15.0,
+                      right: 15.0,
+                    ),
                     child: Column(
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [ConnectionStatus(), AirtelThanks()],
+                          children: [
+                            ConnectionStatus(
+                                mobileNumber: "750935556", isActive: true),
+                            AirtelThanks()
+                          ],
                         ),
-                        ComplicatedImageDemo(),
-                        DataSmsVoiceContainer(),
-                        RechargeCard(),
-                        FlashDealContainer(),
-                        SpecialOffers(),
-                        RecommondedPacks(),
                         Padding(
-                          padding: const EdgeInsets.only(left: 4.0, right: 4.0),
-                          child: Container(
-                            child: Container(
-                              height: 150,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  image: DecorationImage(
-                                      image: NetworkImage(
-                                          'https://scontent.fcmb11-1.fna.fbcdn.net/v/t39.30808-6/210132141_4120569557980429_6834787666218910767_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=e3f864&_nc_ohc=E4-XrcKt4cYAX-uLMH1&_nc_ht=scontent.fcmb11-1.fna&oh=03b456c86e90c74b3517718ef209bd0d&oe=61201B2F'),
-                                      fit: BoxFit.fill)),
-                            ),
-                          ),
+                          padding: const EdgeInsets.only(top: 16.0),
+                          child: ComplicatedImageDemo(),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 15.0),
+                          child: DataSmsVoiceContainer(),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 15.0),
+                          child: RechargeCard(),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 15.0),
+                          child: FlashDealContainer(),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 15.0),
+                          child: SpecialOffers(),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 15.0),
+                          child: RecommondedPacks(),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 15.0),
+                          child: EndBanner(),
                         ),
                         SizedBox(
                           height: 200,

@@ -33,30 +33,36 @@ class NotificationCard extends StatelessWidget {
                         padding: const EdgeInsets.only(bottom: 2.0),
                         child: Text(
                           'Stay Safe! Reload Online',
-                          style: TextStyle(fontSize: 14, color: Colors.black),
+                          style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
                         ),
                       ),
                       Text(
                         '0763124312',
-                        style: TextStyle(fontSize: 13, color: Colors.grey[900]),
+                        style: TextStyle(fontSize: 13, color: Colors.black),
                       )
                     ],
                   ),
                   Text(
                     'Today at 4:43 PM',
-                    style: TextStyle(fontSize: 12, color: Colors.grey[700]),
+                    style: TextStyle(fontSize: 12, color: Color(0xFF505154)),
                   )
                 ],
               ),
-              Align(
-                alignment: Alignment.centerRight,
+              SizedBox(
+                height: 17.0,
+                width: 17.0,
                 child: Checkbox(
-                  value: true,
-                  onChanged: (ss) {},
                   checkColor: Colors.white,
                   fillColor: MaterialStateProperty.all<Color>(Colors.red),
+                  value: true,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5)),
+                  onChanged: (bool? value) {},
                 ),
-              ),
+              )
             ],
           )),
     );
