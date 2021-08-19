@@ -3,6 +3,7 @@ import 'package:my_airtel_app/providers/auth_provider.dart';
 import 'package:my_airtel_app/providers/configure_progress_provider.dart';
 import 'package:my_airtel_app/providers/data_type_provider.dart';
 import 'package:my_airtel_app/providers/language_provider.dart';
+import 'package:my_airtel_app/screens/add_connection_screen1.dart';
 import 'package:my_airtel_app/screens/configure_screen.dart';
 import 'package:my_airtel_app/screens/home_screen.dart';
 import 'package:my_airtel_app/screens/notification_screen.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
             : ConfigureScreen(),
         "/notifications": (context) => Notifications(),
         "/managecon": (context) => ManageConnections(),
+        "/addconnection": (context) => AddConnection(),
       },
       theme: ThemeData(
         appBarTheme: AppBarTheme(

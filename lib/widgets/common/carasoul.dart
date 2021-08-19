@@ -9,7 +9,7 @@ final List<String> imgList = [
 List<Widget> imageSliders = imgList
     .map((item) => Container(
           child: Container(
-            margin: EdgeInsets.only(right: 0.0),
+            margin: EdgeInsets.only(right: 15.0),
             child: Container(
               height: 150,
               decoration: BoxDecoration(
@@ -29,7 +29,7 @@ class ComplicatedImageDemo extends StatelessWidget {
         autoPlay: true,
         aspectRatio: 2.0,
         disableCenter: true,
-        viewportFraction: 1,
+        viewportFraction: 0.97,
         enlargeCenterPage: false,
       ),
       items: imageSliders,

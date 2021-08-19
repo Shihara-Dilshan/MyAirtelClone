@@ -12,7 +12,7 @@ class _ButtonState extends State<SkipButton> {
       height: 45,
       child: TextButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+          backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
           foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
         ),
         onPressed: () {},

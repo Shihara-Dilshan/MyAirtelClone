@@ -70,7 +70,7 @@ class ConnectionCard extends StatelessWidget {
                     size: 20,
                     color: Colors.grey[500],
                   ),
-                  primary
+                  !primary
                       ? Padding(
                           padding: const EdgeInsets.only(left: 15.0),
                           child: Icon(

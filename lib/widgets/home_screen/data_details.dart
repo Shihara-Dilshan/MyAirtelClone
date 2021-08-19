@@ -19,18 +19,21 @@ class _DataDetailsState extends State<DataDetails> {
             child: Column(
               children: [
                 CircularPercentIndicator(
+                  circularStrokeCap: CircularStrokeCap.round,
                   radius: 90.0,
                   lineWidth: 5.0,
+                  backgroundColor: Color(0xFFE7E7E7),
                   percent: 0.6,
                   center: new Text("1.4GB",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                   progressColor: Colors.red,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
                     'Anytime',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.normal),
                   ),
                 )
               ],
@@ -41,17 +44,20 @@ class _DataDetailsState extends State<DataDetails> {
             child: Column(
               children: [
                 CircularPercentIndicator(
+                  circularStrokeCap: CircularStrokeCap.round,
                   radius: 90.0,
                   lineWidth: 5.0,
+                  backgroundColor: Color(0xFFE7E7E7),
                   percent: 0.9,
                   center: new Text("5.2GB",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                   progressColor: Colors.red,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text('Night time',
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                      style: TextStyle(fontWeight: FontWeight.normal)),
                 )
               ],
             ),
@@ -61,17 +67,20 @@ class _DataDetailsState extends State<DataDetails> {
             child: Column(
               children: [
                 CircularPercentIndicator(
+                  circularStrokeCap: CircularStrokeCap.round,
                   radius: 90.0,
                   lineWidth: 5.0,
+                  backgroundColor: Color(0xFFE7E7E7),
                   percent: 0.2,
                   center: new Text("151MB",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                   progressColor: Colors.red,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child:
-                      Text('4G', style: TextStyle(fontWeight: FontWeight.bold)),
+                  child: Text('4G',
+                      style: TextStyle(fontWeight: FontWeight.normal)),
                 )
               ],
             ),

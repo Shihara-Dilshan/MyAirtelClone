@@ -108,6 +108,7 @@ class Notifications extends StatelessWidget {
                       color: Colors.white,
                       child: ButtonNew(
                         lable: "Delete",
+                        callback: () {},
                       ),
                     ),
                   ),

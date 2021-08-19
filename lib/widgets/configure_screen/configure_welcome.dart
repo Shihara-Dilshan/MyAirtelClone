@@ -22,14 +22,12 @@ class WelcomeWideget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('Welcome',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize:
-                              MediaQuery.of(context).size.height * 0.065)),
+                      style:
+                          TextStyle(fontWeight: FontWeight.w400, fontSize: 50)),
                   Text('Explore all services at your fingertips',
                       style: TextStyle(
                           fontWeight: FontWeight.normal,
-                          fontSize: MediaQuery.of(context).size.height * 0.030,
+                          fontSize: 20,
                           color: Colors.grey)),
                 ],
               ),
@@ -38,7 +36,11 @@ class WelcomeWideget extends StatelessWidget {
           Expanded(
             flex: 6,
             child: Container(
-              child: Image(image: AssetImage('assets/images/man_sitting.png')),
+              color: Colors.red,
+              child: Image(
+                image: AssetImage('assets/images/man_sitting.png'),
+                fit: BoxFit.fill,
+              ),
             ), //Replace with your child widget
           ),
           Expanded(
@@ -66,17 +68,17 @@ class WelcomeWideget extends StatelessWidget {
               ),
             ), //Replace with your child widget
           ),
-          Expanded(
+          Flexible(
             flex: 1,
-            child: Container(
-              child: Button(
-                  "Get Started", context.read<ConfigureProgress>().proceed, 2),
-            ), //Replace with your child widget
+            child: Button(
+                "Get Started",
+                context.read<ConfigureProgress>().proceed,
+                2), //Replace with your child widget
           ),
-          Expanded(
+          Flexible(
             flex: 1,
-            child: Container(
-              color: Colors.blue,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 8.0),
               child: SkipButton(),
             ), //Replace with your child widget
           ),

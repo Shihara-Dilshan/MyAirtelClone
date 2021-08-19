@@ -17,22 +17,25 @@ class OTPConfirmWidget extends StatelessWidget {
               children: [
                 Text('Enter OTP sent\nto your number',
                     style:
-                        TextStyle(fontWeight: FontWeight.w400, fontSize: 35)),
+                        TextStyle(fontWeight: FontWeight.w400, fontSize: 30)),
                 Padding(
-                  padding: const EdgeInsets.only(top: 18.0, bottom: 12.0),
+                  padding: const EdgeInsets.only(top: 19.0, bottom: 6.0),
                   child: Text('We sent a code to the number 075 XXX - XXXX',
                       style: TextStyle(
                           fontWeight: FontWeight.normal,
                           fontSize: 16,
                           color: Colors.black87)),
                 ),
-                Text('Change my number',
-                    style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 16,
-                        color: Colors.blueAccent)),
                 Padding(
-                  padding: const EdgeInsets.only(top: 18.0, bottom: 18.0),
+                  padding: const EdgeInsets.only(bottom: 30.0),
+                  child: Text('Change my number',
+                      style: TextStyle(
+                          fontWeight: FontWeight.normal,
+                          fontSize: 16,
+                          color: Colors.blueAccent)),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 18.0, bottom: 21.0),
                   child: Container(
                     decoration: BoxDecoration(
                         color: Colors.grey[50],
@@ -56,7 +59,7 @@ class OTPConfirmWidget extends StatelessWidget {
                   style: TextStyle(color: Colors.grey),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 18.0),
+                  padding: const EdgeInsets.only(top: 114.0),
                   child: Button(
                       "Continue", context.read<Auth>().changeAuthentication, 3),
                 ),

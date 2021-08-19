@@ -46,7 +46,7 @@ class ConfigureScreen extends StatelessWidget {
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: 1 == 2
+            image: 1 == 1
                 ? AssetImage("assets/images/background.jpeg")
                 : AssetImage("assets/images/backgroundwhite.jpeg"),
             fit: BoxFit.cover,

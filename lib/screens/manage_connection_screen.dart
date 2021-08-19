@@ -35,40 +35,67 @@ class ManageConnections extends StatelessWidget {
           )
         ],
       ),
-      body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        color: Color(0xFFF4F4F4),
-        child: Padding(
-            padding: const EdgeInsets.all(0.0),
-            child: SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 0.0),
-                      child: ConnectionCard(
-                        primary: true,
-                        name: "Shihara Dilshan",
-                        number: "0750935556",
+      body: Stack(
+        children: <Widget>[
+          Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            color: Color(0xFFF4F4F4),
+            child: Padding(
+                padding: const EdgeInsets.all(0.0),
+                child: SingleChildScrollView(
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 0.0),
+                          child: ConnectionCard(
+                            primary: true,
+                            name: "Shihara Dilshan",
+                            number: "0750935556",
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 0.0),
+                          child: ConnectionCard(
+                            primary: false,
+                            name: "john doe",
+                            number: "0758965478",
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                )),
+          ),
+          1 == 1
+              ? Padding(
+                  padding: const EdgeInsets.only(
+                      bottom: 33.0, left: 20.0, right: 20.0),
+                  child: Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      height: 45,
+                      color: Colors.white,
+                      child: ButtonNew(
+                        lable: "Add Connection",
+                        callback: () {
+                          print(21);
+                          Navigator.pushNamed(context, "/addconnection");
+                        },
                       ),
                     ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 0.0),
-                      child: ConnectionCard(
-                        primary: false,
-                        name: "john doe",
-                        number: "0758965478",
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            )),
+                  ),
+                )
+              : SizedBox(
+                  height: 0,
+                )
+        ],
       ),
     );
   }

@@ -6,6 +6,7 @@ class ButtonNew extends StatelessWidget {
   final Color? textColor;
   final double? height;
   final double? width;
+  final Function callback;
 
   const ButtonNew({
     required this.lable,
@@ -13,6 +14,7 @@ class ButtonNew extends StatelessWidget {
     this.textColor,
     this.height,
     this.width,
+    required this.callback,
   });
 
   @override
@@ -27,7 +29,10 @@ class ButtonNew extends StatelessWidget {
           foregroundColor:
               MaterialStateProperty.all<Color>(this.textColor ?? Colors.white),
         ),
-        onPressed: () {},
+        onPressed: () {
+          print(2);
+          this.callback();
+        },
         child: Center(
           child: Text(this.lable, style: TextStyle(fontSize: 16)),
         ),
