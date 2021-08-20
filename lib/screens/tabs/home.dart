@@ -12,6 +12,7 @@ import 'package:my_airtel_app/widgets/common/price_tag.dart';
 import 'package:my_airtel_app/widgets/home_screen/airtel_thanks.dart';
 import 'package:my_airtel_app/widgets/home_screen/banner.dart';
 import 'package:my_airtel_app/widgets/home_screen/connection_status_indicator.dart';
+import 'package:my_airtel_app/widgets/home_screen/data_container_new.dart';
 import 'package:my_airtel_app/widgets/home_screen/data_sms_voice_balance_container.dart';
 import 'package:my_airtel_app/widgets/home_screen/flash_deal_container_card.dart';
 import 'package:my_airtel_app/widgets/home_screen/home_background.dart';
@@ -118,7 +119,7 @@ class _HomeState extends State<Home> {
                               Padding(
                                 padding: const EdgeInsets.only(
                                     left: 15.0, top: 15.0),
-                                child: DataSmsVoiceContainer(),
+                                child: DataContainer(),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(
