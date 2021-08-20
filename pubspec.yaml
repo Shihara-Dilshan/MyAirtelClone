@@ -35,6 +35,7 @@ dependencies:
   percent_indicator: ^3.0.1
   modal_bottom_sheet: ^2.0.0
   sizer: ^2.0.13
+  smooth_page_indicator: ^0.3.0-nullsafety.0
 
 dev_dependencies:
   flutter_test:

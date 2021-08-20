@@ -88,13 +88,14 @@ class _HomeState extends State<Home> {
                   child: Padding(
                     padding: const EdgeInsets.only(
                       top: 22.0,
-                      left: 15.0,
+                      left: 0.0,
                       right: 0.0,
                     ),
                     child: Column(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(right: 15.0),
+                          padding:
+                              const EdgeInsets.only(left: 15.0, right: 15.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -115,27 +116,33 @@ class _HomeState extends State<Home> {
                           child: Column(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(top: 15.0),
+                                padding: const EdgeInsets.only(
+                                    left: 15.0, top: 15.0),
                                 child: DataSmsVoiceContainer(),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(top: 15.0),
+                                padding: const EdgeInsets.only(
+                                    left: 15.0, top: 15.0),
                                 child: RechargeCard(),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(top: 15.0),
+                                padding: const EdgeInsets.only(
+                                    left: 15.0, top: 15.0),
                                 child: FlashDealContainer(),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(top: 15.0),
+                                padding: const EdgeInsets.only(
+                                    left: 15.0, top: 15.0),
                                 child: SpecialOffers(),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(top: 15.0),
+                                padding: const EdgeInsets.only(
+                                    left: 15.0, top: 15.0),
                                 child: RecommondedPacks(),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(top: 15.0),
+                                padding: const EdgeInsets.only(
+                                    left: 15.0, top: 15.0),
                                 child: EndBanner(),
                               ),
                               SizedBox(
