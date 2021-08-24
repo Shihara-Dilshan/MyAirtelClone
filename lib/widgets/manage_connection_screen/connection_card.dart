@@ -18,10 +18,10 @@ class ConnectionCard extends StatelessWidget {
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
+              color: Color(0xFF585858).withOpacity(0.5),
               spreadRadius: 0,
               blurRadius: 20,
-              offset: Offset(0, 3),
+              offset: Offset(0, 2),
             ),
           ],
           borderRadius: BorderRadius.circular(10)),

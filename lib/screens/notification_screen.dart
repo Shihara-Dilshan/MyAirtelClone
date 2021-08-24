@@ -23,7 +23,6 @@ class Notifications extends StatelessWidget {
               Icons.sort_by_alpha,
               color: Colors.grey,
             ),
-            tooltip: 'Open shopping cart',
             onPressed: () {},
           ),
           IconWithBadge(

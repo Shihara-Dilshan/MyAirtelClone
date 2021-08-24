@@ -13,7 +13,7 @@ class NotificationCard extends StatelessWidget {
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 0,
               blurRadius: 20,
-              offset: Offset(0, 3),
+              offset: Offset(0, 2),
             ),
           ],
           borderRadius: BorderRadius.circular(10)),
@@ -32,7 +32,7 @@ class NotificationCard extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(bottom: 2.0),
                         child: Text(
-                          'Stay Safe! Reload Online',
+                          'Stay Safe! Reloads Online',
                           style: TextStyle(
                               fontSize: 14,
                               color: Colors.black,

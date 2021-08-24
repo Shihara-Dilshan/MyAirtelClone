@@ -45,10 +45,10 @@ class AddConnection extends StatelessWidget {
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
+                    color: Color(0xFF585858).withOpacity(0.5),
                     spreadRadius: 0,
                     blurRadius: 20,
-                    offset: Offset(0, 3),
+                    offset: Offset(0, 2),
                   ),
                 ],
                 borderRadius: BorderRadius.circular(10)),
@@ -56,30 +56,54 @@ class AddConnection extends StatelessWidget {
               padding:
                   const EdgeInsets.only(top: 20.0, left: 15.0, right: 15.0),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'You can add up to 10 connections. This will help you seamlessly manage all your accounts under one app.',
-                    style: TextStyle(fontSize: 14),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'You can add up to 10 connections. This will help you seamlessly manage all your accounts under one app.',
+                        style: TextStyle(fontSize: 14),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 25.0),
+                        child: Text(
+                          'Enter number',
+                          style: TextStyle(fontSize: 14),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10.0),
+                        child: NumberInput(),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 15.0),
+                        child: Text(
+                          'Set a Nick Name',
+                          style: TextStyle(fontSize: 14),
+                        ),
+                      ),
+                    ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 25.0),
-                    child: Text(
-                      'Enter number',
-                      style: TextStyle(fontSize: 14),
+                    padding: const EdgeInsets.only(bottom: 20.0),
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        height: 45,
+                        color: Colors.white,
+                        child: ButtonNew(
+                          lable: "Proceed",
+                          callback: () {
+                            print(21);
+                            Navigator.pushNamed(context, "/addconnection2");
+                          },
+                        ),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10.0),
-                    child: NumberInput(),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 15.0),
-                    child: Text(
-                      'Set a Nick Name',
-                      style: TextStyle(fontSize: 14),
-                    ),
-                  ),
+                  )
                 ],
               ),
             ),

@@ -9,11 +9,12 @@ class OTPConfirmWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        child: Center(
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('Enter OTP sent\nto your number',
                     style:
@@ -26,16 +27,13 @@ class OTPConfirmWidget extends StatelessWidget {
                           fontSize: 16,
                           color: Colors.black87)),
                 ),
+                Text('Change my number',
+                    style: TextStyle(
+                        fontWeight: FontWeight.normal,
+                        fontSize: 16,
+                        color: Colors.blueAccent)),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 30.0),
-                  child: Text('Change my number',
-                      style: TextStyle(
-                          fontWeight: FontWeight.normal,
-                          fontSize: 16,
-                          color: Colors.blueAccent)),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 18.0, bottom: 21.0),
+                  padding: const EdgeInsets.only(top: 30.0, bottom: 21.0),
                   child: Container(
                     decoration: BoxDecoration(
                         color: Colors.grey[50],
@@ -53,19 +51,20 @@ class OTPConfirmWidget extends StatelessWidget {
                     ),
                   ),
                 ),
-                Text(
-                  'Resend OTP in 00:21',
-                  textAlign: TextAlign.right,
-                  style: TextStyle(color: Colors.grey),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 114.0),
-                  child: Button(
-                      "Continue", context.read<Auth>().changeAuthentication, 3),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      'Resend OTP in 00:21',
+                      textAlign: TextAlign.right,
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                  ],
                 ),
               ],
             ),
-          ),
+            Button("Continue", context.read<Auth>().changeAuthentication, 3),
+          ],
         ),
       ),
     );

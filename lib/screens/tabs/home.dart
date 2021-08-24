@@ -141,11 +141,11 @@ class _HomeState extends State<Home> {
                                     left: 15.0, top: 15.0),
                                 child: RecommondedPacks(),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 15.0, top: 15.0),
-                                child: EndBanner(),
-                              ),
+                              // Padding(
+                              //   padding: const EdgeInsets.only(
+                              //       left: 15.0, top: 15.0),
+                              //   child: EndBanner(),
+                              // ),
                               SizedBox(
                                 height: 200,
                               ),
